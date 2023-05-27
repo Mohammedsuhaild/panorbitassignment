@@ -11,9 +11,8 @@ const [users, setUsers] = useState([]);
 const getData = async () => {
 try {
 setIsLoading(true)
-const res = await axios.get('https://panorbit.in/api/users');
+const res = await axios.get('https://drab-blue-shark-robe.cyclic.app/users');
 const userData = res.data;
-console.log(res)
 setIsLoading(false)
 setUsers(userData);
 } catch (error) {
