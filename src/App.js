@@ -1,30 +1,13 @@
-import React,{useState} from 'react';
+import './App.css';
+import Allroutes from './routes/Allroutes';
 
-import MainScreen from './Components/MainScreen';
-import User from './Components/User';
-import VerticalNav from './Components/VerticalNav';
-import Navbar from './Components/Navbar';
-// import UserProfile from './Components/UserProfile';
-
-const App = () => {
-  const [selectedUser, setSelectedUser] = useState(null);
-
-  const handleUserSelection = (user) => {
-    setSelectedUser(user);
-  };
-
+function App() {
   return (
-    <div>
-      <MainScreen handleUserSelection={handleUserSelection}  />
-      {/* <UserProfile/> */}
-      {/* <VerticalNav/> */}
-      {/* <Navbar/> */}
-      <div>
-        {selectedUser && <User user={selectedUser} />}
-      </div>
-      {/* <User/> */}
+    <div className="App">
+      <Allroutes />
+      {/* <SideNavbar /> */}
     </div>
   );
-};
+}
 
 export default App;
